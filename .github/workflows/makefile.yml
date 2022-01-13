@@ -19,13 +19,16 @@ jobs:
       with:
         release: '9-2019-q4' # The arm-none-eabi-gcc release to use.
       
-    - name: compile
+    - name: Compile
       run: make     
-    
+    - name: Move to build
+      run: mv main.bin ./build/
+      
     - name: Commit changes
       uses: EndBug/add-and-commit@v7
       with:
         default_author: github_actions
         message: 'Github action build'
         add: 'main.bin --force'
+        cwd: './build/'
 
