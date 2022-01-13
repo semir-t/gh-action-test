@@ -16,7 +16,7 @@ int main(void)
 	while(1)
 	{
 		delay_soft_ms(1000);
-		GPIOD->ODR ^= 0xf00f;
+		GPIOD->ODR ^= 0xf000;
 	}
 }
 
