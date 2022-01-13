@@ -3,17 +3,13 @@ include Makefile.variable
 PROJ_NAME=main
 
 # Put your stlink folder here so make burn will work.
-SDK = ../../../sdk
+SDK = ./sdk
 
 # Put your source files here (or *.c, etc)
 SRCS = main.c 
 
 # Normally you shouldn't need to change anything below this line!
 #######################################################################################
-CC = $(GNUGCC)/arm-none-eabi-gcc
-OBJCOPY = $(GNUGCC)/arm-none-eabi-objcopy
-SIZE =  $(GNUGCC)/arm-none-eabi-size
-
 CFLAGS  = -g -O2 -Wall -T$(SDK)/stm32_flash.ld 
 CFLAGS += -mlittle-endian -mthumb -mcpu=cortex-m4 -mthumb-interwork
 # important flag is -fsingle-precision-constant which prevents the double precision emulation
