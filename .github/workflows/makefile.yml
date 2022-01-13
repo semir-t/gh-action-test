@@ -14,9 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: configure
-      run: ./configure
-
     - name: arm-none-eabi-gcc
       uses: fiam/arm-none-eabi-gcc@v1
       with:
