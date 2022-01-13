@@ -27,5 +27,5 @@ jobs:
       with:
         default_author: github_actions
         message: 'Github action build'
-        add: 'main.bin'
+        add: 'main.bin --force'
 
