@@ -23,7 +23,9 @@ jobs:
       run: cd firmware/bootloader-firmware
 
     - name: Compile
-      run: make     
+      run: |
+        ls
+        make     
 
     - name: Move to build
       run: mv main.bin ./build/
