@@ -1,14 +1,14 @@
 .. _msut-firmware-top:
 
 Learnig material
-********************
+****************
 
-Microprocessor systems in telecommunications
-===================================
+Name of the project
+===================
 
 :Date: October 2021
 :Authors: Test
-:Web site: .. ref: www.semir-t.github.io/msut/
+:Web site: .. ref: www.semir-t.github.io/site_url/
 :Version: 1.0.0
 
 Contents:
