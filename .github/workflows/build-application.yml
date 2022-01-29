@@ -20,10 +20,12 @@ jobs:
         release: '9-2019-q4' # The arm-none-eabi-gcc release to use.
       
     - name: Change working directory
-      run: cd firmware/main-firmware
+      run: 
 
     - name: Compile
-      run: ls
+      run: |
+        cd firmware/main-firmware
+        make
 
     - name: Move to build
       run: mv main.bin ./build/
