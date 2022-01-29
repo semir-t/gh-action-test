@@ -37,11 +37,11 @@ jobs:
           bash_script/doc_build.sh
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          echo env.GITHUB_REF
+          echo running on branch ${GITHUB_REF##*/}
 
        # Deploy to github pages if it's a push on master 
       - name: Deploy to github pages
-        if: ${{ env.GITHUB_REF == 'refs/heads/master'}}
+        # if: ${{ env.GITHUB_REF == 'refs/heads/master'}}
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: self
@@ -52,8 +52,8 @@ jobs:
           SKIP_EMPTY_COMMITS: true
           MESSAGE: "Build from {sha}: {msg}"
 
-      - name: Upload as artefact
-        if: ${{ env.GITHUB_REF != 'refs/heads/master'}}
-        uses: actions/upload-artifact@v2
-        with:
-          path: docs
+      # - name: Upload as artefact
+      #   if: ${{ env.GITHUB_REF != 'refs/heads/master'}}
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     path: docs
