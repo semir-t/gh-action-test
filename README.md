@@ -19,6 +19,8 @@
 -->
 
 [![Github pages build](https://github.com/semir-t/gh-action-test/actions/workflows/github-page-build.yml/badge.svg)](https://github.com/semir-t/gh-action-test/actions/workflows/github-page-build.yml)
+[![Build Application](https://github.com/semir-t/gh-action-test/actions/workflows/build-application.yml/badge.svg)](https://github.com/semir-t/gh-action-test/actions/workflows/build-application.yml)
+[![Build Bootloader](https://github.com/semir-t/gh-action-test/actions/workflows/build-bootloader.yml/badge.svg)](https://github.com/semir-t/gh-action-test/actions/workflows/build-bootloader.yml)
 <!--[![Contributors][contributors-shield]][contributors-url]-->
 <!--[![Forks][forks-shield]][forks-url]-->
 <!--[![Stargazers][stars-shield]][stars-url]-->
