@@ -40,7 +40,7 @@ jobs:
 
        # Deploy to github pages if it's a push on develop
       - name: Deploy to github pages
-        if: ${{ env.GITHUB_REF == 'refs/heads/develop'}}
+        if: ${{ env.GITHUB_REF == 'refs/heads/master'}}
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
@@ -52,7 +52,7 @@ jobs:
           MESSAGE: "Build from {sha}: {msg}"
 
       - name: Upload as artefact
-        if: ${{ env.GITHUB_REF != 'refs/heads/develop'}}
+        if: ${{ env.GITHUB_REF != 'refs/heads/master'}}
         uses: actions/upload-artifact@v2
         with:
           path: docs
