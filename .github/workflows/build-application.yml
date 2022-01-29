@@ -23,9 +23,7 @@ jobs:
       run: 
 
     - name: Compile
-      run: |
-        cd firmware/main-firmware
-        make
+      run: cd firmware/main-firmware &&  make
 
     - name: Move to build
       run: mv main.bin ./build/
