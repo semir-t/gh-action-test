@@ -23,7 +23,8 @@ jobs:
         release: '9-2019-q4' # The arm-none-eabi-gcc release to use.
       
     - name: Compile
-      run: make
+      # run: make
+      run: ls 
 
     - name: Move to build
       run: mv main.bin ./build/
