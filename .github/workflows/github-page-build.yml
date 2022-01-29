@@ -41,7 +41,7 @@ jobs:
 
        # Deploy to github pages if it's a push on master 
       - name: Deploy to github pages
-        # if: ${{ env.GITHUB_REF == 'refs/heads/master'}}
+        if: ${{ env.GITHUB_REF == 'master'}}
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: self
