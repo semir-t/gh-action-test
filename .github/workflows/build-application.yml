@@ -10,6 +10,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./firmware/main-firmware
 
     steps:
     - uses: actions/checkout@v2
@@ -20,7 +23,7 @@ jobs:
         release: '9-2019-q4' # The arm-none-eabi-gcc release to use.
       
     - name: Compile
-      run: cd firmware/main-firmware &&  make
+      run: make
 
     - name: Move to build
       run: mv main.bin ./build/
